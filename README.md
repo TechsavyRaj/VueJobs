@@ -56,3 +56,10 @@ This project is licensed under the MIT License.
 
 ## 👨‍💻 Author
 Developed by **Raj (TechsavyRaj)**  
+
+---
+
+## 🙏 Credits
+This project is inspired by and based on tutorials from  
+**[Brad Traversy](https://github.com/bradtraversy)** — a fantastic educator in web development.  
+Special thanks to him for sharing knowledge and resources that helped shape this project.
