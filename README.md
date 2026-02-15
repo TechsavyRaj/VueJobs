@@ -1,38 +1,58 @@
 # VueJobs
 
-This template should help get you started developing with Vue 3 in Vite.
+VueJobs is a job listing application built with **Vue.js**.  
+It allows users to browse, search, and filter job postings with a clean and responsive interface.
 
-## Recommended IDE Setup
+---
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## 🚀 Features
+- Browse job listings with details such as title, company, and description
+- Search jobs by keywords
+- Filter jobs by categories or location
+- Responsive design for desktop and mobile
+- Built with Vue 3 and modern tooling
 
-## Recommended Browser Setup
+---
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+## 🛠️ Tech Stack
+- **Vue.js 3** (Composition API)
+- **Vue Router** for navigation
+- **Axios** for API requests
+- **TailwindCSS** for styling (optional if you used it)
+- **JSON Server / Mock API** for job data (if applicable)
 
-## Customize configuration
+---
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## 📦 Installation
 
-## Project Setup
+Clone the repository:
+```bash
+git clone https://github.com/TechsavyRaj/VueJobs.git
+cd VueJobs
+```
 
-```sh
+Install dependencies:
+```bash
 npm install
 ```
 
-### Compile and Hot-Reload for Development
-
-```sh
+Run the development server:
+```bash
 npm run dev
 ```
 
-### Compile and Minify for Production
+---
 
-```sh
-npm run build
-```
+## 🤝 Contributing
+Contributions are welcome!  
+Feel free to open issues or submit pull requests to improve the project.
+
+---
+
+## 📄 License
+This project is licensed under the MIT License.
+
+---
+
+## 👨‍💻 Author
+Developed by **Raj (TechsavyRaj)**  
