@@ -1,8 +1,3 @@
-Here is a clean, professional `README.md` you can copy-paste into your repository:
-
----
-
-```markdown
 # Vue3Jobs 🚀
 
 A full-stack MEVN (MongoDB, Express, Vue, Node) job listing application where users can browse and manage job postings.
