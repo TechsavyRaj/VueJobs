@@ -2,8 +2,8 @@
 
 A full-stack MEVN (MongoDB, Express, Vue, Node) job listing application where users can browse and manage job postings.
 
-Live Demo: https://vue3jobs.netlify.app
-Backend API: https://vue3jobs.onrender.com
+Live Demo: https://vue3jobs.netlify.app  
+Backend API: https://vue3jobs.onrender.com  
 
 ---
 
@@ -165,12 +165,6 @@ http://localhost:5173
 | GET    | /api/jobs     | Get all jobs   |
 | GET    | /api/jobs/:id | Get single job |
 | POST   | /api/jobs     | Create job     |
-
----
-
-# 📸 Screenshots
-
-(Add screenshots here if desired)
 
 ---
 
