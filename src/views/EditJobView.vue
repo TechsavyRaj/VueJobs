@@ -4,7 +4,7 @@ import {PulseLoader} from 'vue3-spinner';
 import {onMounted, reactive} from "vue";
 import {useRoute} from 'vue-router';
 import {useToast} from 'vue-toastification';
-import axios from 'axios';
+import api from '@/services/api';
 
 const route = useRoute();
 const jobId = route.params.id;
