@@ -194,7 +194,7 @@ This project is open source and available under the MIT License.
 # 👨‍💻 Author
 
 **Raj Gupta**
-GitHub: [https://github.com/TechsavyRaj](https://github.com/TechsavyRaj)
+GitHub: [https://github.com/TechsavyRaj](https://github.com/TechsavyRaj)  
 LinkedIn: [https://linkedin.com/in/techsavyraj?trk=public_profile_browsemap](https://linkedin.com/in/TechsavyRaj)
 
 ---
