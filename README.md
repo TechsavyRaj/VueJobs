@@ -38,53 +38,49 @@ Backend API: https://vue3jobs.onrender.com
 
 ## 📂 Project Structure
 
-```
-
+```text
 Vue3Jobs/
 │
-├── client/        # Vue Frontend
-├── server/        # Express Backend
+├── backend/       # Express Backend
+├── public/        # Static assets
+├── src/           # Vue Frontend source
 ├── README.md
-└── package.json
-
-````
+├── package.json
+└── vite.config.js
+```
 
 ---
 
 # ⚙️ Local Development Setup
 
-## 1️⃣ Clone the Repository
+## 1️⃣ Clone the Repository & Install Dependencies
 
 ```bash
 git clone https://github.com/TechsavyRaj/Vue3Jobs.git
 cd Vue3Jobs
-````
+npm install
+```
 
 ---
 
 ## 2️⃣ Setup Backend
 
-```bash
-cd server
-npm install
-```
+Create a `.env` file inside the `backend/` folder:
 
-Create `.env` file inside `/server`:
-
-```
+```env
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
 ```
 
-Run backend:
+Run backend server:
 
 ```bash
-npm run dev
+npm run server
 ```
 
 Server will run on:
 
-```
+```text
 http://localhost:5000
 ```
 
@@ -92,18 +88,13 @@ http://localhost:5000
 
 ## 3️⃣ Setup Frontend
 
-```bash
-cd client
-npm install
-```
+Create a `.env` file in the root directory (where `vite.config.js` is located):
 
-Create `.env` file inside `/client`:
-
-```
+```env
 VITE_API_URL=http://localhost:5000
 ```
 
-Run frontend:
+Run frontend development server:
 
 ```bash
 npm run dev
@@ -111,7 +102,7 @@ npm run dev
 
 Frontend will run on:
 
-```
+```text
 http://localhost:5173
 ```
 
@@ -122,9 +113,11 @@ http://localhost:5173
 ## Backend (Render)
 
 * Connect GitHub repo
+* Set Build Command to: `npm install`
+* Set Start Command to: `npm run server`
 * Add environment variable:
 
-  ```
+  ```env
   MONGO_URI=your_mongodb_connection_string
   ```
 * Deploy as Web Service
@@ -132,9 +125,11 @@ http://localhost:5173
 ## Frontend (Netlify)
 
 * Connect GitHub repo
+* Set Build Command to: `npm run build`
+* Set Publish directory to: `dist`
 * Add environment variable:
 
-  ```
+  ```env
   VITE_API_URL=https://your-render-backend-url.onrender.com
   ```
 * Trigger deploy
