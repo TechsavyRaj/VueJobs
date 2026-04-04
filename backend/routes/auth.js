@@ -26,47 +26,37 @@ const validatePassword = (password) => {
 // @desc    Register a new user
 router.post('/register', async (req, res) => {
     try {
-        console.log('Register route hit');
         const { name, email, password } = req.body;
-        console.log('Received data:', { name, email, password });
 
         if (!name || !email || !password) {
-            console.log('Missing fields');
             return res.status(400).json({ msg: 'Please add all fields' });
         }
 
         if (!validateEmail(email)) {
-            console.log('Invalid email format');
             return res.status(400).json({ msg: 'Invalid email format' });
         }
 
         if (!validatePassword(password)) {
-            console.log('Invalid password strength');
             return res.status(400).json({ msg: 'Password must be at least 8 characters long, include an uppercase letter, and a number' });
         }
 
         // Check if user exists
-        console.log('Checking if user exists with email:', email);
         const userExists = await User.findOne({ email });
 
         if (userExists) {
-            console.log('User already exists');
             return res.status(400).json({ msg: 'User already exists' });
         }
 
         // Create user
-        console.log('Creating new user...');
         const user = await User.create({
             name,
             email,
             password,
         });
 
-        console.log('User created successfully:', user._id);
 
         if (user) {
             const token = generateToken(user._id);
-            console.log('Token generated successfully');
             res.status(201).json({
                 _id: user._id,
                 name: user.name,
