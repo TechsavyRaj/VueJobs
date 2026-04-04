@@ -20,15 +20,22 @@ Backend API: https://vue3jobs.onrender.com
 - Node.js
 - Express.js
 - MongoDB Atlas
+- JWT (JSON Web Tokens) for authentication
+- bcryptjs for password hashing
 - Render (Deployment)
 
 ---
 
 ## ✨ Features
 
+- User authentication (Register & Login with JWT)
 - View all available jobs
 - View single job details
-- Create new job listings
+- Create new job listings (Protected - requires authentication)
+- Edit job listings (Protected - requires authentication)
+- Delete job listings (Protected - requires authentication)
+- Password validation (minimum 8 characters, uppercase letter, and number)
+- Email format validation
 - REST API integration
 - Loading states
 - Error handling
@@ -72,6 +79,7 @@ PORT=8000
 MONGO_URI=mongodb://127.0.0.1:27017/vue3jobs
 FRONTEND_URL=http://localhost:3000
 VITE_API_URL=http://localhost:8000
+JWT_SECRET=your_jwt_secret_key_here
 ```
 
 ---
@@ -144,27 +152,40 @@ You only need one `.env` file at the root of the project.
 | `MONGO_URI` | MongoDB Connection String (Local or Atlas) |
 | `FRONTEND_URL` | Used by CORS in Backend to grant access (e.g. `http://localhost:3000`) |
 | `VITE_API_URL` | Used by Frontend Axios to reach API (e.g. `http://localhost:8000`) |
+| `JWT_SECRET` | Secret key for JWT token generation (use a secure random string in production) |
 
 ---
 
 # 🧠 API Endpoints
 
-| Method | Endpoint      | Description    |
-| ------ | ------------- | -------------- |
-| GET    | /api/jobs     | Get all jobs   |
-| GET    | /api/jobs/:id | Get single job |
-| POST   | /api/jobs     | Create job     |
+### Authentication
+| Method | Endpoint      | Description    | Auth Required |
+| ------ | ------------- | -------------- | --- |
+| POST   | /api/auth/register | Register a new user | No |
+| POST   | /api/auth/login    | Login and get JWT token | No |
+| GET    | /api/auth/me       | Get current user profile | Yes |
+
+### Jobs
+| Method | Endpoint      | Description    | Auth Required |
+| ------ | ------------- | -------------- | --- |
+| GET    | /api/jobs     | Get all jobs   | No |
+| GET    | /api/jobs/:id | Get single job | No |
+| POST   | /api/jobs     | Create job     | Yes |
+| PUT    | /api/jobs/:id | Update job     | Yes |
+| DELETE | /api/jobs/:id | Delete job     | Yes |
 
 ---
 
 # 🚀 Future Improvements
 
-* Authentication (JWT)
 * Admin dashboard
+* User profile management
 * Pagination
 * Search & filters
-* Edit & delete jobs
-* Role-based access
+* Bookmarked jobs
+* Job application tracking
+* Email notifications
+* Role-based access (Admin, Employer, Job Seeker)
 
 ---
 
