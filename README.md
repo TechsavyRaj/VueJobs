@@ -63,47 +63,45 @@ npm install
 
 ---
 
-## 2️⃣ Setup Backend
+## 2️⃣ Configure Environment
 
-Create a `.env` file inside the `backend/` folder:
+Create a single `.env` file in the **root directory** of your project (same level as `vite.config.js`). It will contain settings for both the backend and frontend:
 
 ```env
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
+PORT=8000
+MONGO_URI=mongodb://127.0.0.1:27017/vue3jobs
+FRONTEND_URL=http://localhost:3000
+VITE_API_URL=http://localhost:8000
 ```
 
-Run backend server:
+---
+
+## 3️⃣ Run Backend
 
 ```bash
 npm run server
 ```
 
-Server will run on:
+The Express API server will start on:
 
 ```text
-http://localhost:5000
+http://localhost:8000
 ```
 
 ---
 
-## 3️⃣ Setup Frontend
+## 4️⃣ Run Frontend
 
-Create a `.env` file in the root directory (where `vite.config.js` is located):
-
-```env
-VITE_API_URL=http://localhost:5000
-```
-
-Run frontend development server:
+Open a new terminal window and run:
 
 ```bash
 npm run dev
 ```
 
-Frontend will run on:
+The Vue Vite frontend will launch (usually on port 3000):
 
 ```text
-http://localhost:5173
+http://localhost:3000
 ```
 
 ---
@@ -138,18 +136,14 @@ http://localhost:5173
 
 # 🔐 Environment Variables
 
-### Backend
+You only need one `.env` file at the root of the project.
 
-| Variable  | Description                     |
-| --------- | ------------------------------- |
-| MONGO_URI | MongoDB Atlas connection string |
-| PORT      | Server port                     |
-
-### Frontend
-
-| Variable     | Description          |
-| ------------ | -------------------- |
-| VITE_API_URL | Backend API base URL |
+| Variable | Description |
+| --- | --- |
+| `PORT` | Express Server active port (Recommended: 8000) |
+| `MONGO_URI` | MongoDB Connection String (Local or Atlas) |
+| `FRONTEND_URL` | Used by CORS in Backend to grant access (e.g. `http://localhost:3000`) |
+| `VITE_API_URL` | Used by Frontend Axios to reach API (e.g. `http://localhost:8000`) |
 
 ---
 
